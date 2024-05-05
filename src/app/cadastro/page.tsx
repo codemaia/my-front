@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-function SubmitForm() {
+function submitForm() {
   const [name, setName] = useState('');
   const [author, setAuthor] = useState('');
   const [editora, setEditora] = useState('');
@@ -12,7 +12,7 @@ function SubmitForm() {
 
     const data = { name, author, editora };
 
-    const response = await fetch('http://localhost:3000/cadastro', {
+    const response = await fetch('http://localhost:8080/books', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
@@ -61,4 +61,4 @@ function SubmitForm() {
 
 };
 
-export default SubmitForm;
+export default submitForm;
