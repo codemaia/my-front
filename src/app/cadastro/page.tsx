@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 function submitForm() {
@@ -51,7 +52,13 @@ function submitForm() {
             <input type="text" id="editora" value={editora} onChange={(e) => setEditora(e.target.value)} className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />    
         </div>
 
-        <button type="submit" className=" bg-indigo-500 hover:bg-indigo-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Cadastrar</button>
+        <div className='flex justify-between'>
+          <button type="submit" className=" bg-indigo-500 hover:bg-indigo-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Cadastrar</button>
+      
+          <Link href="/list">
+            <button className="bg-indigo-500 hover:bg-indigo-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Listar</button>
+          </Link>
+        </div>
 
       </form>
 
