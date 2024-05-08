@@ -63,7 +63,7 @@ export default function ListBook() {
                         <p className="text-gray-600">{book.author}</p>
                         <p className="text-gray-600">{book.editora}</p>
                         <div className="mt-4 flex justify-between">
-                            <Link href={`/list/${book.id}/edit`}>
+                            <Link href={`/list/${book.id}`}>
                                 <button className="text-indigo-500 hover:text-indigo-700">Editar</button>
                             </Link>
                             <button className="text-red-600 hover:text-red-800" onClick={() => handleDelete(book.id)}>Excluir</button>
