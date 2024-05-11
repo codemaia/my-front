@@ -14,16 +14,10 @@ export default function EditBook() {
     author: '',
     editora: ''
   });
-
-  const [name, setName] = useState('');
-  const [author, setAuthor] = useState('');
-  const [editora, setEditora] = useState('');  
-
   
   useEffect(() => {
-    getBookById(id);
-    handleChange;
-    
+    getBookById(id); // montar o forms de edição com os dados do livro cadastrado
+
   }, []);
 
 
@@ -45,6 +39,7 @@ export default function EditBook() {
       console.error(error);
     }
   }
+  
 
   const handleChange = async (event: any): Promise<void> => {
     //atualizando o objeto databook, para carregar o forms com os dados do livro selecionado
@@ -58,9 +53,15 @@ export default function EditBook() {
   };
 
   const handleSubmitChange = async (event: any): Promise<void> => {
+    
     event.preventDefault();
 
-    const data = { name, author, editora};
+    const data = {
+      name: dataBook.name,
+      author: dataBook.author,
+      editora: dataBook.editora
+    }
+    
     try {
 
       const response = await fetch(`http://localhost:8080/books/${id}`, {
@@ -71,11 +72,9 @@ export default function EditBook() {
       
       if(response.ok) {
         console.log(':) Change submitted successfully!');
-  
-        setName('');
-        setAuthor('');
-        setEditora('');
+        console.log(data);
       } 
+
     } catch {
       console.error(':( Error submitting changes');
     }
