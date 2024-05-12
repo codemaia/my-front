@@ -34,9 +34,11 @@ function submitForm() {
 
 
   return (
-    
+      
       <form onSubmit={handleSubmit} className="max-w-sm mx-auto">
-
+        <div>
+          <h1 className='mt-5 text-2xl font-bold mb-4'>Cadastrar Livros</h1>
+        </div>
         <div className="pb-6 pt-6">
             <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nome do Livro</label>
             <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />    
@@ -53,17 +55,14 @@ function submitForm() {
         </div>
 
         <div className='flex justify-between'>
-          <button type="submit" className=" bg-indigo-500 hover:bg-indigo-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Cadastrar</button>
+          <button type="submit" className=" bg-indigo-500 hover:bg-indigo-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Salvar</button>
       
           <Link href="/list">
             <button className="bg-indigo-500 hover:bg-indigo-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Listar</button>
           </Link>
         </div>
 
-      </form>
-
-
-    
+      </form>    
   );
 
 };

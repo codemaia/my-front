@@ -52,7 +52,12 @@ export default function ListBook() {
     return (
         
         <div className="container mx-auto px-4 py-8">
-            <h1 className="text-2xl font-bold mb-4">Lista de Livros</h1>
+            <div className='flex justify-between items-center mb-4'>
+                <h1 className="text-2xl font-bold mb-4">Lista de Livros</h1>
+                <Link href={`/cadastro`}>
+                    <button className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md">Cadastrar Livro</button>
+                </Link>
+            </div>
             {loading ? (
                 <p className="text-gray-500">Carregando...</p>
             ) : (
