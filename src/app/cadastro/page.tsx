@@ -55,10 +55,10 @@ function submitForm() {
         </div>
 
         <div className='flex justify-between'>
-          <button type="submit" className=" bg-indigo-500 hover:bg-indigo-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Salvar</button>
+          <button id="save" type="submit" className="bg-indigo-500 hover:bg-indigo-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Salvar</button>
       
           <Link href="/list">
-            <button className="bg-indigo-500 hover:bg-indigo-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Listar</button>
+            <button id="list" className="bg-indigo-500 hover:bg-indigo-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Listar</button>
           </Link>
         </div>
 

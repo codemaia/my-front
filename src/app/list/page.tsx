@@ -71,7 +71,7 @@ export default function ListBook() {
                             <Link href={`/list/${book.id}`}>
                                 <button className="text-indigo-500 hover:text-indigo-700">Editar</button>
                             </Link>
-                            <button className="text-red-600 hover:text-red-800" onClick={() => handleDelete(book.id)}>Excluir</button>
+                            <button id="excluir" className="text-red-600 hover:text-red-800" onClick={() => handleDelete(book.id)}>Excluir</button>
                         </div>
                     </div>
                 ))}
