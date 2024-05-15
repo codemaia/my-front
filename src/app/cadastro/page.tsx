@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-function submitForm() {
+function SubmitForm() {
   const [name, setName] = useState('');
   const [author, setAuthor] = useState('');
   const [editora, setEditora] = useState('');
@@ -67,4 +67,4 @@ function submitForm() {
 
 };
 
-export default submitForm;
+export default SubmitForm;
